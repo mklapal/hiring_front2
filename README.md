@@ -2,7 +2,7 @@
 
 As discussed I am sending you the description of the dev project. There is no time limit so you can send it back whenever you consider it done.
 
-# Create a d3.js graph in existing marionette application
+# Create a d3.js graph in existing js app
 ----------------------------------------------------------------------
 
 Your task will be to create a data visualization in an existing Marionette application.
@@ -16,14 +16,10 @@ The application is a Contact Manager. When the user opens it in a browser, they 
 
 3. When the user clicks on the "Gender graph" button, they should be redirected to a new page.
 
-4. The user should see a graph on the new page that visualizes the gender distribution. The graph could be one of following charts:
-- pie chart
-- donut chart
-- bar chart
+4. The user should see a graph on the new page that visualizes the gender distribution. The graph could be one of following charts: pie chart, donut chart or bar chart. The chart should be built with d3.js library.
 
-The chart should be built with d3.js library.
-
-Note: The design of the chart is entirely up to you. Feel free to create it the way you find best. 
+*Note:* The design of the chart is entirely up to you. Feel free to create it the way you find best.
+Also nothing except the instructions here is strictly defined and you may use whatever you feel comfortable with it.
 
 Hope you enjoy it :)
 
