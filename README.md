@@ -28,7 +28,7 @@ Hope you enjoy it :)
 
 see original repo on [https://github.com/davidsulc/structuring-backbone-with-requirejs-and-marionette] (https://github.com/davidsulc/structuring-backbone-with-requirejs-and-marionette) 
 
-# Usefull links
+# Useful links
 
 www.backbonejs.org
 www.d3js.org
