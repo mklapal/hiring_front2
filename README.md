@@ -23,6 +23,17 @@ Also nothing except the instructions here is strictly defined and you may use wh
 
 Hope you enjoy it :)
 
+# Building the app
+
+You don't need to deal with building this app. Just to replace following in index.html file
+```
+<script src="./assets/js/require_main.built.js"></script>
+```
+to
+```
+<script src="./assets/js/require_main.js"></script>
+```
+Anyway if you want to deal with it use ```node r.js -o assets/js/build.js``` to build it.
 
 # Original README
 
