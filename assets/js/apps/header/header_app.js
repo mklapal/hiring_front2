@@ -1,19 +1,15 @@
-define(["app", "apps/header/list/list_controller"], function(ContactManager, ListController){
-  ContactManager.module("HeaderApp", function(Header, ContactManager, Backbone, Marionette, $, _){
-    var API = {
-      listHeader: function(){
-        ListController.listHeader();
-      }
-    };
+ContactManager.module("HeaderApp", function(Header, ContactManager, Backbone, Marionette, $, _){
+  var API = {
+    listHeader: function(){
+      Header.List.Controller.listHeader();
+    }
+  };
 
-    ContactManager.commands.setHandler("set:active:header", function(name){
-      ListController.setActiveHeader(name);
-    });
-
-    Header.on("start", function(){
-      API.listHeader();
-    });
+  ContactManager.commands.setHandler("set:active:header", function(name){
+    ContactManager.HeaderApp.List.Controller.setActiveHeader(name);
   });
 
-  return ContactManager.HeaderApp;
+  Header.on("start", function(){
+    API.listHeader();
+  });
 });

@@ -1,7 +1,7 @@
-define(["app", "apps/about/show/show_view"], function(ContactManager, View){
-  return {
+ContactManager.module("AboutApp.Show", function(Show, ContactManager, Backbone, Marionette, $, _){
+  Show.Controller = {
     showAbout: function(){
-      var view = new View.Message();
+      var view = new Show.Message();
       ContactManager.regions.main.show(view);
     }
   };

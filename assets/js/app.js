@@ -10,20 +10,6 @@ define(["marionette", "jquery-ui"], function(Marionette){
     return Backbone.history.fragment
   };
 
-  ContactManager.startSubApp = function(appName, args){
-    var currentApp = appName ? ContactManager.module(appName) : null;
-    if (ContactManager.currentApp === currentApp){ return; }
-
-    if (ContactManager.currentApp){
-      ContactManager.currentApp.stop();
-    }
-
-    ContactManager.currentApp = currentApp;
-    if(currentApp){
-      currentApp.start(args);
-    }
-  };
-
   ContactManager.on("before:start", function(){
     var RegionContainer = Marionette.LayoutView.extend({
       el: "#app-container",
@@ -59,7 +45,7 @@ define(["marionette", "jquery-ui"], function(Marionette){
 
   ContactManager.on("start", function(){
     if(Backbone.history){
-      require(["apps/contacts/contacts_app", "apps/about/about_app"], function () {
+      require(["apps/contacts/contacts_app"], function () {
         Backbone.history.start();
 
         if(ContactManager.getCurrentRoute() === ""){
