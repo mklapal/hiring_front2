@@ -21,6 +21,8 @@ The application is a Contact Manager. When the user opens it in a browser, they 
 *Note:* The design of the chart is entirely up to you. Feel free to create it the way you find best.
 Also nothing except the instructions here is strictly defined and you may use whatever you feel comfortable with it.
 
+*Note:* To make it easier for you, you can add the logic to calculate genders and values into the view. In real example this should be part of controller but here you can do it also in the view.
+
 Hope you enjoy it :)
 
 # Original README
@@ -33,3 +35,61 @@ www.backbonejs.org
 www.d3js.org
 https://github.com/davidsulc/
 https://lostechies.com/derickbailey/
+
+# Hint if needed
+
+## Trigger new page with the dataviz
+
+See how they show dialog to edit a contact. Keep in mind new page can't use ```regions.dialog```!
+
+```
+contactsListView.on("childview:contact:edit", function(childView, args){
+  require(["apps/contacts/edit/edit_view"], function(EditView){
+
+    ...
+
+    ContactManager.regions.dialog.show(view);
+  });
+});
+```
+
+## Pass the data to view
+
+You can pass data to view easily using this:
+
+```
+var view = new View.Graph({
+  data: array
+});
+```
+
+then in the view you have access through:
+
+```
+initialize: function(options) {
+  console.log(options);
+},
+```
+
+## Templates
+
+See other views and templates to understand how you can use variables in the templates.
+
+
+## d3
+https://bl.ocks.org/mbostock/3887193
+
+In view you can use this magic to get the svg on right place :)
+
+```
+onRender: function() {
+  var $graph = this.$el.find('.graph');
+  var svg = d3.select($graph).append("svg");
+
+  ...
+  
+}
+
+```
+
+
