@@ -12,7 +12,8 @@ requirejs.config({
     "spin.jquery": "vendor/spin.jquery",
     text: "vendor/text",
     tpl: "vendor/underscore-tpl",
-    underscore: "vendor/underscore"
+    underscore: "vendor/underscore",
+    d3: "vendor/d3"
   },
 
   shim: {

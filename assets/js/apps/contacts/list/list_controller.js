@@ -43,6 +43,10 @@ define(["app", "apps/contacts/list/list_view"], function(ContactManager, View){
                 ContactManager.trigger("contacts:filter", filterCriterion);
               });
 
+              contactsListPanel.on("contacts:gender-graph", function(){
+                ContactManager.trigger("contacts:gender-graph");
+              });
+
               contactsListLayout.on("show", function(){
                 contactsListLayout.panelRegion.show(contactsListPanel);
                 contactsListLayout.contactsRegion.show(contactsListView);
