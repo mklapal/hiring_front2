@@ -10,6 +10,24 @@ define(["app", "apps/config/storage/localstorage"], function(ContactManager){
         gender: ""
       },
 
+      get: function (attr) {
+        if (typeof this[attr] == 'function') {
+          return this[attr]();
+        }
+        return Backbone.Model.prototype.get.call(this, attr);
+      },
+
+      genderText: function() {
+        switch (this.get("gender")) {
+          case "M":
+            return "Male";
+          case "F":
+            return "Female";
+          default:
+            return "—";
+        }
+      },
+
       validate: function(attrs, options) {
         var errors = {}
         if (! attrs.firstName) {

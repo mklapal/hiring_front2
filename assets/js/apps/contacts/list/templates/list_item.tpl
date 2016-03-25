@@ -1,6 +1,11 @@
 <td><%- firstName %></td>
 <td><%- lastName %></td>
-<td><%- gender %></td>
+<td><%-
+  ({
+    F: "Female",
+    M: "Male"
+  })[gender] || '—'
+%></td>
 <td>
   <a href="#contacts/<%- id %>" class="btn btn-small js-show">
     <i class="icon-eye-open"></i>
