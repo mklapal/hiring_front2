@@ -1,12 +1,11 @@
 # Instructions
 
-As discussed I am sending you the description of the dev project. There is no time limit so you can send it back whenever you consider it done.
+As discussed I am sending you the description of the dev project. There is no time limit so you can send it back whenever you consider it is done.
 
 # Create a d3.js graph in existing js app
 ----------------------------------------------------------------------
 
 Your task will be to create a data visualization in an existing Marionette application.
-You can get the code from this repository and once you are done with it create pull request for this repo.
 
 The application is a Contact Manager. When the user opens it in a browser, they land on a page listing the existing contacts. Each contact has a first name, last name and phone number. 
 
@@ -44,12 +43,12 @@ See how they show dialog to edit a contact. Keep in mind new page can't use ```r
 
 ```
 contactsListView.on("childview:contact:edit", function(childView, args){
-  require(["apps/contacts/edit/edit_view"], function(EditView){
+	require(["apps/contacts/edit/edit_view"], function(EditView){
 
-    ...
+		...
 
-    ContactManager.regions.dialog.show(view);
-  });
+		ContactManager.regions.dialog.show(view);
+	});
 });
 ```
 
@@ -59,7 +58,7 @@ You can pass data to view easily using this:
 
 ```
 var view = new View.Graph({
-  data: array
+	data: array
 });
 ```
 
@@ -67,7 +66,7 @@ then in the view you have access through:
 
 ```
 initialize: function(options) {
-  console.log(options);
+	console.log(options);
 },
 ```
 
@@ -83,11 +82,11 @@ In view you can use this magic to get the svg on right place :)
 
 ```
 onRender: function() {
-  var $graph = this.$el.find('.graph');
-  var svg = d3.select($graph).append("svg");
+	var $graph = this.$el.find('.graph');
+	var svg = d3.select($graph).append("svg");
 
-  ...
-  
+	...
+	
 }
 
 ```
