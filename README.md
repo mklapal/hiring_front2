@@ -2,6 +2,8 @@
 
 As discussed I am sending you the description of the dev project. There is no time limit so you can send it back whenever you consider it is done.
 
+If you get stacked with this example try to deliver at least whatever part you can. Doesn't matter it is not 100%, this way we can see how you think and code. Always better to see something than nothing :)
+
 # Create a d3.js graph in existing js app
 ----------------------------------------------------------------------
 
