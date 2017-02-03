@@ -4,6 +4,8 @@ As discussed I am sending you the description of the dev project. There is no ti
 
 If you get stacked with this example try to deliver at least whatever part you can. Doesn't matter it is not 100%, this way we can see how you think and code. Always better to see something than nothing :)
 
+If you can't do the Backbone part you may finish d3 part might or vice versa :)
+
 # Create a d3.js graph in existing js app
 ----------------------------------------------------------------------
 
