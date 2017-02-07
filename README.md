@@ -6,6 +6,10 @@ If you get stacked with this example try to deliver at least whatever part you c
 
 If you can't do the Backbone part you may finish d3 part might or vice versa :)
 
+If you are not familiar with github you can download ZIP files here
+https://github.com/mklapal/hiring_front2/archive/master.zip
+and then send us the test back via email.
+
 # Create a d3.js graph in existing js app
 ----------------------------------------------------------------------
 
