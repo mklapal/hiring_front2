@@ -1,3 +1,58 @@
 body {
   padding-top: 60px; /* 60px to make the container make room for the navigation bar */
 }
+
+.gender-graph h1 {
+  text-align: center;
+}
+
+.gender-graph svg text {
+  text-anchor: middle;
+  cursor: default;
+  font-size: 13px;
+}
+
+.gender-graph svg text.summary {
+  font-size: 30px;
+  fill: #ccc;
+  stroke: #000;
+  stroke-width: 1px;
+  transition: all 0.5s;
+}
+
+.gender-graph svg text.summary:hover {
+  fill: #000;
+}
+
+.gender-graph svg .segment {
+  transition: all 0.5s;
+}
+
+.gender-graph svg .segment .arc {
+  opacity: 0.7;
+  stroke-width: 0px;
+  transition: all 0.5s;
+}
+.gender-graph svg .segment:hover .arc {
+  opacity: 1;
+}
+
+.gender-graph svg .segment .label-arc {
+  opacity: 0;
+  stroke-width: 0px;
+  transition: all 0.5s;
+}
+.gender-graph svg .segment:hover .label-arc {
+  opacity: 1;
+  stroke-width: 2px;
+}
+
+.gender-graph svg .segment text.value {
+  font-size: 30px;
+  fill: #fff;
+  text-shadow: 0px 0px 5px #000;
+  transition all 0.5s;
+}
+.gender-graph svg .segment:hover text.value {
+  text-shadow: 0px 0px 1px #000, 0px 0px 2px #000;
+}

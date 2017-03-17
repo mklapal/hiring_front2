@@ -11,6 +11,8 @@ define(["app", "apps/contacts/common/views"], function(ContactManager, CommonVie
           this.$el.prepend($title);
         }
 
+        this.$("#contact-gender").val(this.model.get("gender"));
+
         this.$(".js-submit").text("Update contact");
       }
     });

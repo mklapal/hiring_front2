@@ -6,7 +6,26 @@ define(["app", "apps/config/storage/localstorage"], function(ContactManager){
       defaults: {
         firstName: "",
         lastName: "",
-        phoneNumber: ""
+        phoneNumber: "",
+        gender: ""
+      },
+
+      get: function (attr) {
+        if (typeof this[attr] == 'function') {
+          return this[attr]();
+        }
+        return Backbone.Model.prototype.get.call(this, attr);
+      },
+
+      genderText: function() {
+        switch (this.get("gender")) {
+          case "M":
+            return "Male";
+          case "F":
+            return "Female";
+          default:
+            return "—";
+        }
       },
 
       validate: function(attrs, options) {
@@ -84,11 +103,25 @@ define(["app", "apps/config/storage/localstorage"], function(ContactManager){
           });
         }, 2000);
         return defer.promise();
+      },
+
+      getContactStatsGender: function(){
+        return API.getContactEntities().then(function(contacts) {
+          return contacts.reduce(function(stats, contact) {
+            var gender = contact.get('gender') || 'unknown';
+            stats[gender] = stats[gender] ? stats[gender] + 1 : 1;
+            return stats;
+          }, {F: 0, M: 0, unknown: 0});
+        });
       }
     };
 
     ContactManager.reqres.setHandler("contact:entities", function(){
       return API.getContactEntities();
+    });
+
+    ContactManager.reqres.setHandler("contact:stats-gender", function(){
+      return API.getContactStatsGender();
     });
 
     ContactManager.reqres.setHandler("contact:entity", function(id){

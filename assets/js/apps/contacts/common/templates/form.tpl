@@ -11,5 +11,13 @@
     <label for="contact-phoneNumber" class="control-label">Phone number:</label>
     <input id="contact-phoneNumber" name="phoneNumber" type="text" value="<%- phoneNumber %>"/>
   </div>
+  <div class="control-group">
+    <label for="contact-gender" class="control-label">Gender:</label>
+    <select id="contact-gender" name="gender">
+      <option></option>
+      <option value="F">Female</option>
+      <option value="M">Male</option>
+    </select>
+  </div>
   <button class="btn js-submit">Save</button>
 </form>

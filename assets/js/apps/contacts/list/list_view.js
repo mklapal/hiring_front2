@@ -19,7 +19,8 @@ define(["app",
       template: panelTpl,
 
       triggers: {
-        "click button.js-new": "contact:new"
+        "click button.js-new": "contact:new",
+        "click button.js-gender-graph": "contacts:gender-graph"
       },
 
       events: {
